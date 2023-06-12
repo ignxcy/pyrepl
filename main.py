@@ -1,10 +1,16 @@
 #!/usr/bin/python3
-from colorama import Fore
 import os
 
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
 orange = '\033[0;33m'
-purple = '\033[0;35m'
+blue="\033[1;34m"
+purple="\033[1;35m"
+cyan="\033[1;36m"
 pink = '\033[0;95m'
+grey="\033[0;37m"
+reset="\033[m"
 
 def do(action):
     if action == "":
@@ -12,7 +18,7 @@ def do(action):
     else:
         return eval(action)
 
-print("Welcome to " + Fore.RED + "P" + orange + "y" + Fore.YELLOW + "R" + Fore.GREEN + "e" + Fore.BLUE + "p" + purple + "l" + pink + "!" + Fore.RESET)
+print("Welcome to " + red + "P" + orange + "y" + yellow + "R" + green + "e" + blue + "p" + purple + "l" + pink + "!" + reset)
 print("Press ^C any time to exit")
 
 try:
@@ -24,8 +30,8 @@ try:
             if result is not None:
                 print(result)
         except Exception as e:
-            print("An " + Fore.RED + "error " + Fore.RESET + "occurred!")
+            print("An " + red + "error " + reset + "occurred!")
             print(e)
 except KeyboardInterrupt:
-    print(Fore.RED + "\nB" + orange + "y" + Fore.YELLOW + "e" + Fore.GREEN + "!" + Fore.RESET)
+    print(red + "\nB" + orange + "y" + yellow + "e" + green + "!" + reset)
     pass
